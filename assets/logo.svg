@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Närke Flis AB">
+  <circle cx="100" cy="100" r="92" fill="#244d2a"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#c8862a" stroke-width="4"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#c8862a" stroke-width="1.5"/>
+  <g fill="#7ab85f">
+    <polygon points="100,40 118,72 82,72"/>
+    <polygon points="100,58 124,96 76,96"/>
+    <polygon points="100,78 130,120 70,120"/>
+  </g>
+  <rect x="95" y="118" width="10" height="16" fill="#8a5a22"/>
+  <g fill="#c8862a">
+    <polygon points="62,132 78,128 82,138 66,142"/>
+    <polygon points="120,130 136,134 132,144 116,140"/>
+    <polygon points="86,140 102,138 104,148 88,150"/>
+  </g>
+  <path d="M28 152 L172 152 L162 172 L38 172 Z" fill="#c8862a"/>
+  <text x="100" y="166" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="bold" fill="#244d2a" letter-spacing="1.5">NÄRKE FLIS AB</text>
+</svg>
