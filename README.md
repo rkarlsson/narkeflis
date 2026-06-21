@@ -16,35 +16,54 @@ Live domain: **narkeflis.com**
 
 No build step, no dependencies. Open `index.html` in a browser to preview.
 
-## Hosting (recommended: GitHub Pages — free)
+## Hosting: GitHub Pages — free
 
-Since the project already lives in a git repo, **GitHub Pages** is the simplest
-free option. Steps:
+The site is served from this repo by **GitHub Pages**. The repo root contains a
+`CNAME` file holding `narkeflis.com`, which tells Pages to serve at the custom
+domain. Pages is enabled to deploy from the `main` branch, root folder.
 
-1. Push this repo to GitHub (repo name `narkeflis`).
-2. Repo **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
-   branch `main`, folder `/ (root)`. Save.
-3. Under **Custom domain** enter `narkeflis.com` and save. Tick **Enforce HTTPS**.
-4. At your domain registrar's DNS, add the web records below.
-   **Leave the existing MX records alone** — they keep Google Workspace email working.
+To go live, the domain's DNS (registrar: **GoDaddy**) must point at GitHub.
 
-   For the apex `narkeflis.com`, add A/AAAA records pointing at GitHub Pages:
-   ```
-   A     @   185.199.108.153
-   A     @   185.199.109.153
-   A     @   185.199.110.153
-   A     @   185.199.111.153
-   AAAA  @   2606:50c0:8000::153
-   AAAA  @   2606:50c0:8001::153
-   AAAA  @   2606:50c0:8002::153
-   AAAA  @   2606:50c0:8003::153
-   ```
-   And for `www`:
-   ```
-   CNAME  www   <your-github-username>.github.io.
-   ```
+### GoDaddy DNS setup
 
-GitHub Pages issues a free SSL certificate automatically once DNS resolves.
+Log in to GoDaddy → **My Products → Domains → narkeflis.com → DNS / Manage DNS**.
+
+> ⚠️ **Leave the MX records alone.** They route email to Google Workspace. Only
+> touch the web records (A / AAAA / CNAME) below.
+
+1. **Apex domain (`narkeflis.com`).** GoDaddy ships a default `A` record for `@`
+   pointing at a GoDaddy parking IP. **Edit/replace it** so there are four `A`
+   records for `@` pointing at GitHub Pages (GoDaddy lets you add multiple `A`
+   records with the same name — add the first, then "Add Record" for the rest):
+
+   | Type | Name | Value | TTL |
+   |------|------|-------|-----|
+   | A | @ | 185.199.108.153 | 1 hour |
+   | A | @ | 185.199.109.153 | 1 hour |
+   | A | @ | 185.199.110.153 | 1 hour |
+   | A | @ | 185.199.111.153 | 1 hour |
+
+   Optionally also add the IPv6 `AAAA` records for `@`:
+   `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
+
+2. **`www` subdomain.** Add a `CNAME` record:
+
+   | Type | Name | Value | TTL |
+   |------|------|-------|-----|
+   | CNAME | www | rkarlsson.github.io | 1 hour |
+
+3. If GoDaddy has **domain Forwarding** set on the apex, remove it — it conflicts
+   with the A records.
+
+DNS can take from a few minutes up to a few hours to propagate. Once it resolves,
+GitHub Pages auto-issues a free SSL certificate; then tick **Enforce HTTPS** in
+the repo's **Settings → Pages**.
+
+Until DNS propagates, the site is also reachable at
+`https://rkarlsson.github.io/narkeflis/`.
+
+### Deploying changes
+Just commit and push to `main` — GitHub Pages rebuilds automatically.
 
 ### Alternatives
 - **Cloudflare Pages** — also free, faster global CDN, but easiest when the

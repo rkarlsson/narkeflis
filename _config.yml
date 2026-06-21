@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) configuration.
+# Keep documentation / dev files out of the published site so they aren't
+# reachable at e.g. narkeflis.com/CLAUDE.md.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - _config.yml
+  - .gitignore

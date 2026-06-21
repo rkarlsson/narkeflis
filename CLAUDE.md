@@ -49,11 +49,19 @@ easy to rebuild in future sessions.
 - Plain **HTML + CSS only**. No build step, no JS framework, no dependencies.
 - Files: `index.html`, `styles.css`, `favicon.svg`, `assets/logo.svg`.
 - Mobile-first, responsive. Keep it dependency-free so any static host works.
+- `CNAME` (apex domain), `_config.yml` (excludes README/CLAUDE from the published
+  site) and the docs are GitHub-Pages plumbing — see Hosting below.
 
 ## Hosting / deployment
-- Hosted as a static site. See `README.md` for the chosen provider and deploy steps.
-- Domain **narkeflis.com**. **Do not touch the MX records** — email runs on Google
-  Workspace. Only point the web (A/AAAA/CNAME) records at the host.
+- Hosted on **GitHub Pages**, free, deploying from the `main` branch (root).
+  Repo: `github.com/rkarlsson/narkeflis`. Live URL: https://narkeflis.com
+  (also https://rkarlsson.github.io/narkeflis/ until DNS propagates).
+- **Deploy = push to `main`.** Pages rebuilds automatically.
+- `CNAME` file pins the custom domain `narkeflis.com`.
+- `_config.yml` `exclude:` keeps `README.md` / `CLAUDE.md` from being served.
+- Domain registrar is **GoDaddy** (DNS managed there). Full step-by-step DNS
+  records are in `README.md`. **Do not touch the MX records** — email runs on
+  Google Workspace. Only the web A/AAAA/CNAME records point at GitHub Pages.
 
 ## Roadmap / next steps
 - [ ] Choose + set up hosting, point narkeflis.com at it (keep MX intact).
