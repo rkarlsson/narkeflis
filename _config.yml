@@ -1,8 +1,12 @@
 # GitHub Pages (Jekyll) configuration.
-# Keep documentation / dev files out of the published site so they aren't
-# reachable at e.g. narkeflis.com/CLAUDE.md.
+# Keep documentation / dev / design files out of the published site so they
+# aren't reachable at e.g. narkeflis.com/CLAUDE.md or narkeflis.com/assets/...
 exclude:
   - README.md
   - CLAUDE.md
   - _config.yml
   - .gitignore
+  # Design assets — kept in the repo for reference, NOT served on the website.
+  - assets/logo
+  - assets/logo.svg
+  - assets/business-card

@@ -38,6 +38,14 @@ easy to rebuild in future sessions.
     `assets/logo/generate-pngs.sh` (headless Chrome). Banner/wordmark text is
     pinned with SVG `textLength` so it fits regardless of the viewer's fonts —
     keep that when editing or the text will overflow with a wide serif fallback.
+  - **Business card** in `assets/business-card/`: front + back SVG (85×55 mm) +
+    PNGs and a preview mockup, built with `assets/business-card/generate.sh`.
+  - **All design assets are excluded from the published website** via `_config.yml`
+    (`assets/logo`, `assets/logo.svg`, `assets/business-card`). They live in the
+    repo for reference only and must NOT be served from narkeflis.com. The live
+    site uses an inline SVG logo + root `favicon.svg`, so it needs nothing in
+    `assets/`. If you add web photos later, put them in a *different* path (e.g.
+    `img/`) so they aren't caught by these excludes.
 - **Palette:** green-dark `#244d2a`, green `#2f6135`, green-light `#7ab85f`,
   amber `#c8862a`, amber-dark `#a96f1f`, cream `#f5f0e6`, ink `#2b2b2b`.
 - **Imagery:** the truck + chipper is currently an inline **SVG illustration**
