@@ -46,6 +46,13 @@ Log in to GoDaddy → **My Products → Domains → narkeflis.com → DNS / Mana
    Optionally also add the IPv6 `AAAA` records for `@`:
    `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
 
+   > **Adding multiple `@` A records on GoDaddy:** use the **Add New Record**
+   > button for each one (Type A, Name `@`, one IP per record) — don't try to
+   > edit a single record to hold all four. If GoDaddy refuses to add more than
+   > one `@` A record, **a single A record is enough** — keep just
+   > `@ → 185.199.108.153`. The four IPs only add edge redundancy; any one of
+   > them serves the site fine.
+
 2. **`www` subdomain.** Add a `CNAME` record so `www.narkeflis.com` works too:
 
    | Type | Name | Value | TTL |
