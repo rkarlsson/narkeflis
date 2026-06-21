@@ -46,14 +46,23 @@ Log in to GoDaddy → **My Products → Domains → narkeflis.com → DNS / Mana
    Optionally also add the IPv6 `AAAA` records for `@`:
    `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
 
-2. **`www` subdomain.** Add a `CNAME` record:
+2. **`www` subdomain.** Add a `CNAME` record so `www.narkeflis.com` works too:
 
    | Type | Name | Value | TTL |
    |------|------|-------|-----|
    | CNAME | www | rkarlsson.github.io | 1 hour |
 
-3. If GoDaddy has **domain Forwarding** set on the apex, remove it — it conflicts
-   with the A records.
+   With **both** the apex `A` records (step 1) and this `www` `CNAME` in place,
+   GitHub Pages serves both hostnames and automatically **redirects
+   `www.narkeflis.com` → `narkeflis.com`** over HTTPS. No extra config needed —
+   the apex is the canonical address and `www` follows it.
+
+   > GoDaddy note: GoDaddy adds a default `CNAME www → @` (or a parking value).
+   > Edit that existing `www` record to point at `rkarlsson.github.io` rather than
+   > adding a second one.
+
+3. If GoDaddy has **domain Forwarding** set on the apex or on `www`, remove it —
+   it conflicts with the records above.
 
 DNS can take from a few minutes up to a few hours to propagate. Once it resolves,
 GitHub Pages auto-issues a free SSL certificate; then tick **Enforce HTTPS** in
