@@ -64,7 +64,9 @@ easy to rebuild in future sessions.
   Google Workspace. Only the web A/AAAA/CNAME records point at GitHub Pages.
 
 ## Roadmap / next steps
-- [ ] Choose + set up hosting, point narkeflis.com at it (keep MX intact).
+- [x] Hosting live on GitHub Pages. GoDaddy DNS points apex (4× A records) + `www`
+      CNAME at GitHub. HTTPS cert issued and **Enforce HTTPS is on** — http/www
+      both 301-redirect to https://narkeflis.com. MX kept on Google Workspace.
 - [ ] Replace SVG illustration with Tomas's real photos.
 - [ ] Apply Tomas's copy edits.
 - [ ] Possible later additions: service area (kommuner), org.nr in footer, more services.
