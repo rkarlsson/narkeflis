@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Närke Flis AB">
-  <circle cx="100" cy="100" r="92" fill="#244d2a"/>
+  <!-- For dark backgrounds: cream circle, light tree. Transparent outside the circle. -->
+  <circle cx="100" cy="100" r="92" fill="#f5f0e6"/>
   <circle cx="100" cy="100" r="92" fill="none" stroke="#c8862a" stroke-width="4"/>
   <circle cx="100" cy="100" r="78" fill="none" stroke="#c8862a" stroke-width="1.5"/>
-  <g fill="#7ab85f">
+  <g fill="#3d7a35">
     <polygon points="100,40 118,72 82,72"/>
     <polygon points="100,58 124,96 76,96"/>
     <polygon points="100,78 130,120 70,120"/>

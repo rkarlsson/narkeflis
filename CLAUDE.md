@@ -32,6 +32,12 @@ easy to rebuild in future sessions.
   woodchips, banner reading **"NÄRKE FLIS AB"** (no tagline inside the logo).
   - Standalone file: `assets/logo.svg`. Favicon: `favicon.svg` (simplified emblem).
   - A header variant (cream circle on the green bar) is inlined in `index.html`.
+  - **Logo pack** in `assets/logo/`: 7 variants (emblem-color, emblem-reverse,
+    mono-green, mono-black, icon-color, horizontal, stacked) as SVG masters +
+    transparent high-res PNGs in `assets/logo/png/`. Built/regenerated with
+    `assets/logo/generate-pngs.sh` (headless Chrome). Banner/wordmark text is
+    pinned with SVG `textLength` so it fits regardless of the viewer's fonts —
+    keep that when editing or the text will overflow with a wide serif fallback.
 - **Palette:** green-dark `#244d2a`, green `#2f6135`, green-light `#7ab85f`,
   amber `#c8862a`, amber-dark `#a96f1f`, cream `#f5f0e6`, ink `#2b2b2b`.
 - **Imagery:** the truck + chipper is currently an inline **SVG illustration**

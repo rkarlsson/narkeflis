@@ -11,6 +11,7 @@ Live domain: **narkeflis.com**
 | `index.html` | The whole site (single page, Swedish) |
 | `styles.css` | Styling |
 | `assets/logo.svg` | Standalone logo (for email signature, print, etc.) |
+| `assets/logo/` | **Logo pack** — 7 variants (emblem, reverse, mono, icon, horizontal, stacked) as SVG + transparent PNG. See `assets/logo/README.md`. |
 | `favicon.svg` | Browser tab icon |
 | `CLAUDE.md` | Full project requirements / context |
 

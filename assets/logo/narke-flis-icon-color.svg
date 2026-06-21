@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Närke Flis">
+  <!-- Icon mark only (no text). For favicon, social avatar, stamp, small spaces. -->
+  <circle cx="100" cy="100" r="92" fill="#244d2a"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#c8862a" stroke-width="4"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#c8862a" stroke-width="1.5"/>
+  <g fill="#7ab85f">
+    <polygon points="100,46 122,84 78,84"/>
+    <polygon points="100,66 128,110 72,110"/>
+    <polygon points="100,86 134,132 66,132"/>
+  </g>
+  <rect x="93" y="130" width="14" height="20" fill="#8a5a22"/>
+  <g fill="#c8862a">
+    <polygon points="58,156 78,151 82,162 62,167"/>
+    <polygon points="122,154 142,158 138,169 118,165"/>
+    <polygon points="88,164 106,162 108,173 90,175"/>
+  </g>
+</svg>
