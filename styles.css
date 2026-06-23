@@ -186,6 +186,8 @@ section { padding: 40px 0; }
   padding: 20px;
   font-size: .9rem;
 }
+.site-footer p { margin: 4px 0; }
+.site-footer .orgnr { font-size: .82rem; opacity: .8; }
 
 @media (max-width: 480px) {
   .brand-name { font-size: 1rem; }

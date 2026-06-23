@@ -68,7 +68,7 @@ easy to rebuild in future sessions.
 4. **Våra tjänster** — two cards: "Flisning" and "Transport".
 5. **Kontakta oss** — two cards: Tomas Karlsson (tel + mailto) and Johan Karlsson
    (tel + bio).
-6. **Footer** — © Närke Flis AB · Närke, Sverige.
+6. **Footer** — © Närke Flis AB · Närke, Sverige + "Organisationsnummer: 556568-5749".
 
 ## Tech & conventions
 - Plain **HTML + CSS only**. No build step, no JS framework, no dependencies.
@@ -95,4 +95,5 @@ easy to rebuild in future sessions.
 - [x] Replaced SVG illustration with a real photo (`img/flistugg.jpg`, Bruks 1006).
 - [x] Applied owner's copy edits (services, location, two contacts) — 2026-06-24.
 - [ ] More photos / gallery when supplied.
-- [ ] Possible later additions: org.nr in footer, more services.
+- [x] Org.nr in footer: 556568-5749.
+- [ ] Possible later additions: more services, photo gallery, email-signature snippets.
