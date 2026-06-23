@@ -23,7 +23,12 @@ body {
   color: var(--ink);
   background: var(--cream);
   line-height: 1.6;
+  overflow-x: hidden;
 }
+
+img { max-width: 100%; height: auto; }
+
+h1, h2, h3, p { overflow-wrap: break-word; }
 
 a { color: var(--amber-dark); }
 
@@ -82,12 +87,22 @@ a { color: var(--amber-dark); }
   color: var(--muted);
   font-size: clamp(1rem, 2.5vw, 1.15rem);
 }
-.hero-art {
+.hero-photo {
+  margin: 24px auto 0;
+  max-width: 460px;
+}
+.hero-photo img {
   width: 100%;
-  max-width: 620px;
   height: auto;
-  margin: 20px auto 0;
   display: block;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .20);
+}
+.hero-photo figcaption {
+  margin-top: 10px;
+  font-size: .92rem;
+  font-style: italic;
+  color: var(--muted);
 }
 
 /* ---------- Sections ---------- */
@@ -98,10 +113,25 @@ section { padding: 40px 0; }
   font-size: clamp(1.4rem, 4vw, 1.9rem);
   margin: 0 0 28px;
 }
-.services { background: #fff; }
-.service-card {
-  max-width: 520px;
+/* ---------- About ---------- */
+.about { text-align: center; }
+.about p {
+  max-width: 640px;
   margin: 0 auto;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.5vw, 1.12rem);
+}
+
+/* ---------- Services ---------- */
+.services { background: #fff; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.service-card {
   border: 1px solid #e3d9c4;
   border-radius: 14px;
   padding: 28px 26px;
@@ -114,17 +144,32 @@ section { padding: 40px 0; }
 
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
-.contact .person { font-size: 1.2rem; font-weight: 700; margin: 0 0 14px; color: var(--green-dark); }
-.contact-list {
-  list-style: none;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 0;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
+}
+.contact-card {
+  background: #fff;
+  border: 1px solid #e3d9c4;
+  border-radius: 14px;
+  padding: 24px 26px;
   text-align: left;
 }
-.contact-list li { font-size: 1.1rem; }
+.contact-card .person { font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--green-dark); }
+.contact-card .role { margin: 2px 0 14px; color: var(--amber-dark); font-weight: 700; font-size: .95rem; }
+.contact-card .bio { margin: 14px 0 0; font-size: .92rem; color: var(--muted); line-height: 1.55; }
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-list li { font-size: 1.05rem; }
 .contact-list a {
   color: var(--amber-dark);
   font-weight: 700;
