@@ -6,13 +6,15 @@ Two-sided design at the EU/Swedish standard **85 × 55 mm**.
 |------|------|
 | `business-card-front.svg` | Front (branding): emblem + tagline + web |
 | `business-card-back.svg` | Back (contact): Tomas Karlsson + phone/email/web |
-| `png/business-card-front.png` | Front, 1700×1100 px transparent (~508 dpi) |
-| `png/business-card-back.png` | Back, 1700×1100 px transparent |
+| `png/business-card-front.png` | Front, **2008×1299 px @ 600 dpi = 85×55 mm**, transparent |
+| `png/business-card-back.png` | Back, **2008×1299 px @ 600 dpi = 85×55 mm**, transparent |
 | `png/business-card-mockup.png` | Preview of both sides — good for email |
 
 ## For the print shop
-- **Trim size:** 85 × 55 mm. Add **3 mm bleed** on each side if the printer asks
-  (the SVG background colour can extend — currently it's edge-to-edge).
+- **Trim size:** 85 × 55 mm. The SVGs declare `width="85mm" height="55mm"`; the
+  PNGs are 2008×1299 px with 600 dpi embedded, so both report 85 × 55 mm.
+- Backgrounds are **full-bleed** (colour runs edge-to-edge). Add **3 mm bleed** on
+  each side if the printer asks — the background can simply extend outward.
 - **Safe margin:** keep important text ≥ 4 mm from the trim edge.
 - **Colours:** forest green `#244D2A`, wood amber `#C8862A`, leaf green `#7AB85F`,
   cream `#F5F0E6`.
